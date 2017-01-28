@@ -22,18 +22,21 @@ Data from 2013 to 2015 is available.
 
 ## Summary statistics
 
-This is an example for 2013 to 2015.
+This is an example for 2013 to 2015: `fars_summarize_years(c(2013:2015))`
 
-```{r sumarise}
-head(mtcars, 1)
-#fars_summarize_years(c(2013-2015))
+```{r sumarise, echo=FALSE}
+library(fars)
+suppressMessages(require(dplyr))
+source(file="R/fars_functions.R")
+fars_summarize_years(c(2013:2015))
 ```
 
 ## Mapping traffic accidents
 
-This is an example for Florida in 2013.
+This is an example for Florida in 2013: `fars_map_state("12","2013")`
 
-```{r map}
+```{r map, echo=FALSE}
+library(maps)
 fars_map_state("12","2013")
 ```
 

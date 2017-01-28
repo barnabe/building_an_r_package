@@ -6,10 +6,10 @@
 #'
 #' @param filename a string and, optionally a path, representing a CSV file name
 #'
-#' @importFrom dyplr tbl_df
-#' @importFrom readr read.csv
+#' @importFrom dplyr tbl_df
+#' @importFrom readr read_csv
 #'
-#' @return a dyplr dataframe
+#' @return a dplyr dataframe
 #'
 #' @examples
 #' \dontrun{
@@ -32,8 +32,6 @@ fars_read <- function(filename) {
 #'
 #' @param year an integer year value (YYYY)
 #'
-#' @importFrom base sprintf
-#'
 #' @return a string representing a standard file name for a given year
 #'
 #' @examples
@@ -42,6 +40,7 @@ fars_read <- function(filename) {
 #' Creates a standard file name for the 2017 dataset
 #' }
 #'
+#' @export
 make_filename <- function(year) {
         year <- as.integer(year)
         sprintf("inst/ext_data/accident_%d.csv.bz2", year)
@@ -58,7 +57,7 @@ make_filename <- function(year) {
 #'  @inheritParams fars_read
 #'  @inheritParams make_filename
 #'
-#'  @importFrom dyplr mutate select
+#'  @importFrom dplyr mutate select
 #'
 #'  @return A tipple of the MONTH and YEAR values for each data file in the \code{years} range
 #'  @examples
@@ -93,7 +92,8 @@ fars_read_years <- function(years) {
 #'
 #' @return table of summary statistics
 #'
-#' @importFrom dyplr group_by summarise spread bind_row
+#' @importFrom dplyr group_by summarise bind_rows
+#' @importFrom tidyr spread
 #'
 #' @examples
 #' \dontrun{
@@ -125,8 +125,8 @@ fars_summarize_years <- function(years) {
 #' @inheritParams fars_read
 #' @inheritParams make_filname
 #'
-#' @importFrom dyplr filter
-#' @importFrom maps map state
+#' @importFrom dplyr filter
+#' @importFrom maps map
 #' @importFrom graphics points
 #'
 #' @return a long/lat plot of reported accidents in the U.S. state and year of choice against a state boundary map

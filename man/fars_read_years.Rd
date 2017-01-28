@@ -17,7 +17,7 @@ This function returns the month and year of the data in a range of annual data f
  @inheritParams fars_read
  @inheritParams make_filename
 
-@importFrom dyplr mutate select
+@importFrom dplyr mutate select
 
 @return A tipple of the MONTH and YEAR values for each data file in the \code{years} range
  @examples

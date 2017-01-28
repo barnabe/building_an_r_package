@@ -27,7 +27,7 @@ draw the relevant map and the \code{\link{graphics}} package to plot dots.
 }
 \examples{
 \dontrun{
-fars_map_state("10","2013")
+fars_map_state("12","2013")
 }
 
 }

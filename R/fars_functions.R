@@ -44,7 +44,7 @@ fars_read <- function(filename) {
 #'
 make_filename <- function(year) {
         year <- as.integer(year)
-        sprintf("accident_%d.csv.bz2", year)
+        sprintf("inst/ext_data/accident_%d.csv.bz2", year)
 }
 
 #' Data date range
@@ -126,7 +126,7 @@ fars_summarize_years <- function(years) {
 #' @inheritParams make_filname
 #'
 #' @importFrom dyplr filter
-#' @importFrom maps map
+#' @importFrom maps map state
 #' @importFrom graphics points
 #'
 #' @return a long/lat plot of reported accidents in the U.S. state and year of choice against a state boundary map

@@ -1,0 +1,38 @@
+---
+title: "fars functions"
+author: "Barnabe"
+date: "26/01/2017"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This code is part of an assignment from "Buiding R Packages" at Coursera. <http://www.coursera.org>.
+
+Its main functions are `fars_summarise_year` and `fars_map_state` which allo users to produce descriptibe statistics of U.S. traffic accidents by year and month for the former, and to visualise traffic accidents in a given state and year on a simple contour map for the latter. 
+
+Data from 2013 to 2015 is available.
+
+## Summary statistics
+
+This is an example for 2013 to 2015.
+
+```{r sumarise}
+fars_summarize_years(c(2013-2015))
+```
+
+## Mapping traffic accidents
+
+This is an example for Florida in 2013.
+
+```{r map, echo=FALSE}
+fars_map_state("12","2013")
+```
+

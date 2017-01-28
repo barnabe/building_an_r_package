@@ -1,14 +1,15 @@
 #' Read source data file
 #'
 #' @details This function looks for a CSV file called \code{filename} and checks whether it exists or not,
-#' if found it loads the data using \code{readr::read.csv} and converts it to a dyplr dataframe using \code{dyplr::tbl_df}
+#' if found it loads the data using \code{readr::read.csv} and converts it to a dyplr dataframe using \code{dyplr::tbl_df}.
+#' If no data file with that name exists, the funtion returns an error.
 #'
-#' @param filename the name and, optionally, path to a CSV file
+#' @param filename a string and, optionally a path, representing a CSV file name
 #'
 #' @importFrom dyplr tbl_df
 #' @importFrom readr read.csv
 #'
-#' @return data a dyplr dataframe
+#' @return a dyplr dataframe
 #'
 #' @examples
 #' \dontrun{
@@ -33,7 +34,7 @@ fars_read <- function(filename) {
 #'
 #' @importFrom base sprintf
 #'
-#' @return a name
+#' @return a string representing a standard file name for a given year
 #'
 #' @examples
 #' \dontrun{
@@ -127,6 +128,8 @@ fars_summarize_years <- function(years) {
 #' @importFrom dyplr filter
 #' @importFrom maps map
 #' @importFrom graphics points
+#'
+#' @return a long/lat plot of reported accidents in the U.S. state and year of choice against a state boundary map
 #'
 #' @examples
 #' \dontrun{

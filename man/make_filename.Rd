@@ -10,7 +10,7 @@ make_filename(year)
 \item{year}{an integer year value (YYYY)}
 }
 \value{
-a name
+a string representing a standard file name for a given year
 }
 \description{
 Standard data file name

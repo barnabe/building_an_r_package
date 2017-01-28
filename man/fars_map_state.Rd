@@ -11,6 +11,9 @@ fars_map_state(state.num, year)
 
 \item{year}{relevant data year}
 }
+\value{
+a long/lat plot of reported accidents in the U.S. state and year of choice against a state boundary map
+}
 \description{
 This function maps accidents in individual U.S. State in a given year
 }

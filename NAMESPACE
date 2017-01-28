@@ -3,7 +3,6 @@
 export(fars_map_state)
 export(fars_read)
 export(fars_summarize_years)
-export(hello_world)
 importFrom(base,sprintf)
 importFrom(dyplr,bind_row)
 importFrom(dyplr,filter)

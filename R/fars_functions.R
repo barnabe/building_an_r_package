@@ -133,7 +133,7 @@ fars_summarize_years <- function(years) {
 #'
 #' @examples
 #' \dontrun{
-#' fars_map_state("10","2013")
+#' fars_map_state("12","2013")
 #' }
 #'
 #' @export

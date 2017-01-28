@@ -7,17 +7,18 @@
 fars_read(filename)
 }
 \arguments{
-\item{filename}{the name and, optionally, path to a CSV file}
+\item{filename}{a string and, optionally a path, representing a CSV file name}
 }
 \value{
-data a dyplr dataframe
+a dyplr dataframe
 }
 \description{
 Read source data file
 }
 \details{
 This function looks for a CSV file called \code{filename} and checks whether it exists or not,
-if found it loads the data using \code{readr::read.csv} and converts it to a dyplr dataframe using \code{dyplr::tbl_df}
+if found it loads the data using \code{readr::read.csv} and converts it to a dyplr dataframe using \code{dyplr::tbl_df}.
+If no data file with that name exists, the funtion returns an error.
 }
 \examples{
 \dontrun{

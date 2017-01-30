@@ -6,7 +6,7 @@
 #'
 #' @param filename a string and, optionally a path, representing a CSV file name
 #'
-#' @importFrom dplyr tbl_df
+#' @import dplyr
 #' @importFrom readr read_csv
 #'
 #' @return a dplyr dataframe
@@ -57,7 +57,8 @@ make_filename <- function(year) {
 #'  @inheritParams fars_read
 #'  @inheritParams make_filename
 #'
-#'  @importFrom dplyr mutate select
+#'  @import dplyr
+#'  @import magrittr
 #'
 #'  @return A tipple of the MONTH and YEAR values for each data file in the \code{years} range
 #'  @examples
@@ -109,8 +110,6 @@ fars_summarize_years <- function(years) {
                 tidyr::spread(year, n)
 }
 
-
-Sys.setenv(R_MAP_DATA_DIR = "StateMapEnv") #loads the US state border dataset
 #' Map Accidents
 #'
 #' This function maps accidents in individual U.S. State in a given year
@@ -127,8 +126,8 @@ Sys.setenv(R_MAP_DATA_DIR = "StateMapEnv") #loads the US state border dataset
 #' @inheritParams fars_read
 #' @inheritParams make_filname
 #'
+#' @import maps
 #' @importFrom dplyr filter
-#' @importFrom maps map
 #' @importFrom graphics points
 #'
 #' @return a long/lat plot of reported accidents in the U.S. state and year of choice against a state boundary map

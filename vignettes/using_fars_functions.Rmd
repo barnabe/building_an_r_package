@@ -26,8 +26,9 @@ This is an example for 2013 to 2015: `fars_summarize_years(c(2013:2015))`
 
 ```{r sumarise, echo=FALSE}
 library(fars)
+suppressMessages(library(dplyr))
 source(file="R/fars_functions.R")
-#fars_summarize_years(c(2013:2015))
+fars_summarize_years(c(2013:2015))
 ```
 
 ## Mapping traffic accidents
@@ -35,7 +36,7 @@ source(file="R/fars_functions.R")
 This is an example for Florida in 2013: `fars_map_state("12","2013")`
 
 ```{r map, echo=FALSE}
-#library(maps)
+library(maps)
 fars_map_state("12","2013")
 ```
 

@@ -10,7 +10,7 @@ fars_read(filename)
 \item{filename}{a string and, optionally a path, representing a CSV file name}
 }
 \value{
-a dplyr dataframe
+a dataframe
 }
 \description{
 Read source data file

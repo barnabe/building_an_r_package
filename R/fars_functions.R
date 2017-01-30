@@ -7,9 +7,10 @@
 #' @param filename a string and, optionally a path, representing a CSV file name
 #'
 #' @import dplyr
+#'
 #' @importFrom readr read_csv
 #'
-#' @return a dplyr dataframe
+#' @return a dataframe
 #'
 #' @examples
 #' \dontrun{
@@ -50,23 +51,27 @@ make_filename <- function(year) {
 #'
 #' This function returns the month and year of the data in a range of annual data files
 #'
-#'  @details This function iterates over a range of year values and uses the \code{\link{fars_read}} and \code{\link{make_filename}}
-#'  to find and report the content of the MONTH and YEAR columns in each data file. The data files have to be in the same working directory.
+#' @details This function iterates over a range of year values and uses the \code{\link{fars_read}} and \code{\link{make_filename}}
+#' to find and report the content of the MONTH and YEAR columns in each data file. The data files have to be in the same working directory.
 #'
-#'  @param years a vector of integer year values (YYYY)
-#'  @inheritParams fars_read
-#'  @inheritParams make_filename
+#' @param years a vector of integer year values (YYYY)
 #'
-#'  @import dplyr
-#'  @import magrittr
+#' @inheritParams fars_read
 #'
-#'  @return A tipple of the MONTH and YEAR values for each data file in the \code{years} range
-#'  @examples
-#'  \dontrun{
+#' @inheritParams make_filename
+#'
+#' @import dplyr
+#'
+#' @import magrittr
+#'
+#' @return A tipple of the MONTH and YEAR values for each data file in the \code{years} range
+#'
+#' @examples
+#' \dontrun{
 #'  fars_read_years(c(2013:2015))
-#'  }
+#' }
 #'
-#'  @export
+#' @export
 fars_read_years <- function(years) {
         lapply(years, function(year) {
                 file <- make_filename(year)

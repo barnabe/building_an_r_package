@@ -6,6 +6,9 @@
 \usage{
 fars_summarize_years(years)
 }
+\arguments{
+\item{years}{a vector of integer year values (YYYY)}
+}
 \value{
 table of summary statistics
 }

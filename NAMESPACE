@@ -2,9 +2,11 @@
 
 export(fars_map_state)
 export(fars_read)
+export(fars_read_years)
 export(fars_summarize_years)
 export(make_filename)
 import(dplyr)
+import(magrittr)
 import(maps)
 importFrom(dplyr,filter)
 importFrom(graphics,points)

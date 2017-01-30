@@ -92,7 +92,7 @@ fars_read_years <- function(years) {
 #'
 #' @return table of summary statistics
 #'
-#' @importFrom dplyr group_by summarise bind_rows
+#' @import dplyr
 #' @importFrom tidyr spread
 #'
 #' @examples
@@ -109,6 +109,8 @@ fars_summarize_years <- function(years) {
                 tidyr::spread(year, n)
 }
 
+
+Sys.setenv(R_MAP_DATA_DIR = "StateMapEnv") #loads the US state border dataset
 #' Map Accidents
 #'
 #' This function maps accidents in individual U.S. State in a given year

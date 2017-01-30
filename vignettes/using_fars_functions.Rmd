@@ -3,13 +3,16 @@ title: "fars functions"
 author: "Barnabe"
 date: "26/01/2017"
 output:
-  pdf_document: default
+  pdf_document: 
+    fig_height: 6
+    fig_width: 10
   html_document: default
   word_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, echo=FALSE}
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Introduction
@@ -23,6 +26,7 @@ Data from 2013 to 2015 is available.
 ## Summary statistics
 
 This is an example for 2013 to 2015: `fars_summarize_years(c(2013:2015))`
+
 
 ```{r sumarise, echo=FALSE}
 library(fars)

@@ -101,6 +101,8 @@ fars_read_years <- function(years) {
 #'
 #' @importFrom tidyr spread
 #'
+#' @importFrom utils installed.packages
+#'
 #' @examples
 #' \dontrun{
 #' fars_summarize_years(c(2013:2015))

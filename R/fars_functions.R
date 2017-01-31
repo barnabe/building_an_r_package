@@ -163,3 +163,25 @@ fars_map_state <- function(state.num, year) {
                 graphics::points(LONGITUD, LATITUDE, pch = 46)
         })
 }
+
+#' Testing
+#'
+#' This function runs the tests in the tests/ directory. it has not argument
+#'
+#' @import testthat
+#'
+#' @return test results from the testthat package
+#'
+#' @examples
+#' \dontrun{
+#' testing()
+#' }
+#'
+#' @export
+testing<- function(){
+  #create test output
+  test_output=fars_summarize_years(c(2013:2015))
+  #run test files in tests/ directory
+  test_dir("tests/")
+
+}

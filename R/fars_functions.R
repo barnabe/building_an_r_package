@@ -186,6 +186,6 @@ testing<- function(){
   #create test output
   test_output=fars_summarize_years(c(2013:2015))
   #run test files in tests/ directory
-  testthat::test_dir("tests/")
+  testthat::test_dir("tests/testthat")
 
 }

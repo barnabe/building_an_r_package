@@ -1,3 +1,5 @@
+utils::globalVariables(c("STATE", "MONTH","year"))
+
 #' Read source data file
 #'
 #' @details This function looks for a CSV file called \code{filename} and checks whether it exists or not,

@@ -98,6 +98,7 @@ fars_read_years <- function(years) {
 #' @return table of summary statistics
 #'
 #' @import dplyr
+#'
 #' @importFrom tidyr spread
 #'
 #' @examples
@@ -131,7 +132,7 @@ fars_summarize_years <- function(years) {
 #' @inheritParams make_filname
 #'
 #' @import maps
-#' @importFrom dplyr filter
+#' @import dplyr
 #' @importFrom graphics points
 #'
 #' @return a long/lat plot of reported accidents in the U.S. state and year of choice against a state boundary map

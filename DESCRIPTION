@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Barnabe
 Maintainer: Barnabe <yourself@somewhere.net>
 Description: Test R functions using road accident data 
-Depends: dplyr, magrittr, maps, readr, tidyr, graphics
+Depends: dplyr, magrittr, maps, graphics, readr, tidyr, testthat
 License: OCC
 Encoding: UTF-8
 LazyData: true

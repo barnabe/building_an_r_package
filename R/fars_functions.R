@@ -168,7 +168,7 @@ fars_map_state <- function(state.num, year) {
 #'
 #' This function runs the tests in the tests/ directory. it has not argument
 #'
-#' @import testthat
+#' @importFrom testthat test_that test_dir expect_is
 #'
 #' @return test results from the testthat package
 #'
@@ -182,6 +182,6 @@ testing<- function(){
   #create test output
   test_output=fars_summarize_years(c(2013:2015))
   #run test files in tests/ directory
-  test_dir("tests/")
+  testthat::test_dir("tests/")
 
 }

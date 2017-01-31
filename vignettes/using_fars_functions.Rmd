@@ -11,7 +11,6 @@ output:
 ---
 
 ```{r setup, echo=FALSE}
-knitr::opts_knit$set(root.dir = normalizePath(".."))
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -29,7 +28,7 @@ This is an example for 2013 to 2015: `fars_summarize_years(c(2013:2015))`
 
 
 ```{r sumarise, echo=FALSE}
-library(fars)
+suppressMessages(library(fars))
 suppressMessages(library(dplyr))
 source(file="R/fars_functions.R")
 fars_summarize_years(c(2013:2015))
@@ -42,5 +41,13 @@ This is an example for Florida in 2013: `fars_map_state("12","2013")`
 ```{r map, echo=FALSE}
 library(maps)
 fars_map_state("12","2013")
+```
+
+## Testing the package ouptuts
+
+The function `testing()` call a pre-defined series of tests.
+```{r tests, echo=FALSE}
+test_output=fars_summarize_years(c(2013:2015))
+testing()
 ```
 
